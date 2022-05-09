@@ -4,8 +4,7 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @restaurant = Restaurant.new
@@ -18,8 +17,7 @@ class RestaurantsController < ApplicationController
     redirect_to restaurant_path(@restaurant)
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @restaurant.update(restaurant_params)
