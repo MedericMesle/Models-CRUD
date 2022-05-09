@@ -2,6 +2,6 @@
 
 <ul>
   <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %> <%= Emoji.find_by_alias("star").raw * restaurant.rating %></li>
   <% end %>
 </ul>

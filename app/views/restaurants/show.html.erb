@@ -1,6 +1,6 @@
 <h2><%= @restaurant.name %></h2>
 <p><%= @restaurant.address %></p>
-<p><%= @restaurant.rating %></p>
+<p><%= Emoji.find_by_alias("star").raw * @restaurant.rating %></p>
 
 <%= link_to "Delete #{@restaurant.name}",
             restaurant_path(@restaurant),
